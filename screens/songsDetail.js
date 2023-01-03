@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {Stylesheet, Text, View, FlatList, Image, TextInput, Pressable,} from 'react-native';
+import {StyleSheet, Text, View, FlatList, Image, TextInput, Pressable,} from 'react-native';
 
 
 const SongsDetail = ({navigation, route}) =>{
