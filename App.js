@@ -16,7 +16,7 @@ export default function App() {
   return (
    <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name ="songs" component={Songs} />
+        <Stack.Screen name ="Home" component={Songs} />
         <Stack.Screen name ="songsDetail" component={SongsDetail} />
       </Stack.Navigator>
    </NavigationContainer>
@@ -30,4 +30,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+
+
 });

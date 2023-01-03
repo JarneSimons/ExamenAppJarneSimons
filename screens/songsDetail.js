@@ -6,8 +6,8 @@ const SongsDetail = ({navigation, route}) =>{
 
     
     return(
-        <View>
-          <Text>
+        <View style={styles.boxTitle}>
+          <Text style={styles.detailTitle}>
             {route.params.itemTitle}
           </Text>
 
@@ -20,3 +20,18 @@ const SongsDetail = ({navigation, route}) =>{
 }
 
 export default SongsDetail;
+
+const styles = StyleSheet.create ({
+  detailTitle: {
+    fontSize: 24,
+    fontWeight: "bold",
+    alignItems: 'center',
+    marginTop: 20,
+    marginBottom: 20,
+
+  },
+  boxTitle: {
+    alignItems: 'center',
+  }
+
+});
