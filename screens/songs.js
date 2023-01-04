@@ -1,10 +1,11 @@
 import React, {useState, useEffect} from 'react';
-import {StyleSheet, Text, View, FlatList, Image, TextInput, Pressable,} from 'react-native';
+import {StyleSheet, Text, View, FlatList, Image, TextInput, Pressable, TouchableNativeFeedback,} from 'react-native';
 
 
 const Songs = ({navigation}) =>{//
 
     const [songs, setSongs] = useState ([]);
+    const [likes, setLikes] = useState (0);
 
     const getSongs = async () => {
         try {
@@ -23,6 +24,11 @@ const Songs = ({navigation}) =>{//
         getSongs();
     }, []);
 
+
+    const addLike = () => {
+        console.log("button pressed")
+    };
+
     return(
         <View style={styles.home}>
             
@@ -39,11 +45,15 @@ const Songs = ({navigation}) =>{//
                   )}
                     <Text style={styles.boxTitle}>
                         <Text style={styles.title}>{item.title.rendered}</Text>
-                        
                     </Text>
                     <Pressable onPress={()=> navigation.navigate("songsDetail", {itemTitle: item.title.rendered, itemArtist: item.yoast_head_json.og_description, itemImage: item.yoast_head_json.og_image[0].url})}>
                         <Text style={styles.buttons}>Bekijk nummer</Text>
                     </Pressable>
+
+                    <TouchableNativeFeedback style={styles.likeButton} onPress={()=> addLike}>
+                        <Text>like song</Text>
+                    </TouchableNativeFeedback>
+                    
                 </View>
                 
                 
@@ -115,6 +125,11 @@ const styles = StyleSheet.create({
         marginLeft: '80%',
         marginTop: 10,
         marginBottom: 10,
+    },
+    likeButton: {
+        backgroundColor: "red",
+        padding: 40,
+        color: "white",
     }
 
 });
