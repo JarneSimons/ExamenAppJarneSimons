@@ -14,6 +14,9 @@ const SongsDetail = ({navigation, route}) =>{
           <Text>
             {route.params.itemArtist}
           </Text>
+
+          <Image style={{width:300, height:200}} source={{uri: `${route.params.itemImage}`}}/>
+            
         
         </View>
     );

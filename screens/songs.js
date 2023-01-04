@@ -39,7 +39,7 @@ const Songs = ({navigation}) =>{
                         <Text style={styles.title}>{item.title.rendered}</Text>
                         
                     </Text>
-                    <Pressable onPress={()=> navigation.navigate("songsDetail", {itemTitle: item.title.rendered, itemArtist: item.yoast_head_json.og_description})}>
+                    <Pressable onPress={()=> navigation.navigate("songsDetail", {itemTitle: item.title.rendered, itemArtist: item.yoast_head_json.og_description, itemImage:item.yoast_head_json.og_image[0].url})}>
                         <Text style={styles.buttons}>Bekijk nummer</Text>
                     </Pressable>
                 </View>
