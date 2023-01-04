@@ -32,7 +32,7 @@ const Songs = ({navigation}) =>{//
 
     return(
         <View style={styles.home}>
-            <View>
+            <View style={styles.boxLikes}>
                 <Text style={styles.likeCounter}>{likes}</Text>
                 <Image style={styles.like} source={require('../assets/images/like.png')}/>
             </View>
@@ -126,7 +126,6 @@ const styles = StyleSheet.create({
     like: {
         width: 50,
         height: 50,
-        marginLeft: '80%',
         marginTop: 10,
         marginBottom: 10,
     },
@@ -134,12 +133,25 @@ const styles = StyleSheet.create({
         backgroundColor: "yellow",
         padding: 20,
         color: "#f5f5f5",
+        
     },
     likeCounter: {
         color: "#f5f5f5",
         fontSize: 24,
         fontWeight: "bold",
+        marginLeft: "72%",
+        zIndex: 1,
+        marginTop: 17,
+        marginRight: 10,
+        
+        
+        
         
     },
+    boxLikes: {
+        
+        flexDirection: "row",
+        marginTop: 5,
+    }
 
 });
