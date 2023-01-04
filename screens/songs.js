@@ -26,13 +26,17 @@ const Songs = ({navigation}) =>{//
 
 
     const addLike = () => {
-        console.log("button pressed")
+        console.log("button pressed");
+        setLikes((currentLikes) => currentLikes+1)
     };
 
     return(
         <View style={styles.home}>
+            <View>
+                <Text style={styles.likeCounter}>{likes}</Text>
+                <Image style={styles.like} source={require('../assets/images/like.png')}/>
+            </View>
             
-            <Image  style={styles.like} source={require('../assets/images/like.png')}/>
             <FlatList data={songs} renderItem={({item}) => (
                 <View style={styles.numbers}>
                     {item.yoast_head_json?.og_image !== undefined && (
@@ -50,9 +54,9 @@ const Songs = ({navigation}) =>{//
                         <Text style={styles.buttons}>Bekijk nummer</Text>
                     </Pressable>
 
-                    <TouchableNativeFeedback style={styles.likeButton} onPress={()=> addLike}>
+                    <Pressable style={styles.likeButton} onPress={()=> addLike()}>
                         <Text>like song</Text>
-                    </TouchableNativeFeedback>
+                    </Pressable>
                     
                 </View>
                 
@@ -127,9 +131,15 @@ const styles = StyleSheet.create({
         marginBottom: 10,
     },
     likeButton: {
-        backgroundColor: "red",
-        padding: 40,
-        color: "white",
-    }
+        backgroundColor: "yellow",
+        padding: 20,
+        color: "#f5f5f5",
+    },
+    likeCounter: {
+        color: "#f5f5f5",
+        fontSize: 24,
+        fontWeight: "bold",
+        
+    },
 
 });
