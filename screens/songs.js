@@ -26,6 +26,7 @@ const Songs = ({navigation}) =>{//
     return(
         <View style={styles.home}>
             <Image style={styles.logo} source={require('../assets/images/logo.png')}/>
+            <Image source={require('../assets/images/like.png')}/>
             <FlatList data={songs} renderItem={({item}) => (
                 <View style={styles.numbers}>
                     {item.yoast_head_json?.og_image !== undefined && (
