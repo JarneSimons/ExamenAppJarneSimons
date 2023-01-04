@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {StyleSheet, Text, View, FlatList, Image, TextInput, Pressable,} from 'react-native';
 
 
-const Songs = ({navigation}) =>{
+const Songs = ({navigation}) =>{//
 
     const [songs, setSongs] = useState ([]);
 
@@ -39,7 +39,7 @@ const Songs = ({navigation}) =>{
                         <Text style={styles.title}>{item.title.rendered}</Text>
                         
                     </Text>
-                    <Pressable onPress={()=> navigation.navigate("songsDetail", {itemTitle: item.title.rendered, itemArtist: item.yoast_head_json.og_description, itemImage:item.yoast_head_json.og_image[0].url})}>
+                    <Pressable onPress={()=> navigation.navigate("songsDetail", {itemTitle: item.title.rendered, itemArtist: item.yoast_head_json.og_description, itemImage: item.yoast_head_json.og_image[0].url})}>
                         <Text style={styles.buttons}>Bekijk nummer</Text>
                     </Pressable>
                 </View>
@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
     },  
 
     numbers: {
-        backgroundColor: "#212226",
+        backgroundColor: "#1e1f21",
         alignItems: 'center',
         marginBottom: 15,
         marginTop: 10,
@@ -87,18 +87,18 @@ const styles = StyleSheet.create({
         borderRadius: 5,
     },
     home: {
-        backgroundColor: "#f5f5f5",
+        backgroundColor: "#010B12",
         
     },
     buttons: {
-        backgroundColor:"#4EF0B6",
+        backgroundColor:"#39FF13",
         paddingLeft: 88,
         paddingRight: 88,
         paddingTop: 15,
         paddingBottom: 15,
         marginTop: 10,
         borderRadius: 7,
-        color: "#212226",
+        color: "#010B12",
         fontSize: 18,
     },
 
