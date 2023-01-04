@@ -25,7 +25,7 @@ const Songs = ({navigation}) =>{//
 
     return(
         <View style={styles.home}>
-            <Image source={require('../assets/images/logo.png')}></Image>
+            <Image style={styles.logo} source={require('../assets/images/logo.png')}/>
             <FlatList data={songs} renderItem={({item}) => (
                 <View style={styles.numbers}>
                     {item.yoast_head_json?.og_image !== undefined && (
@@ -89,7 +89,8 @@ const styles = StyleSheet.create({
     },
     home: {
         backgroundColor: "#010B12",
-        paddingTop: 100,
+        
+        
         
     },
     buttons: {
@@ -102,6 +103,13 @@ const styles = StyleSheet.create({
         borderRadius: 7,
         color: "#010B12",
         fontSize: 18,
+    },
+    logo: {
+        width: 70,
+        height: 70,
+        marginBottom: 20,
+        marginTop: 20,
+        marginLeft: 20,
     },
 
 });
