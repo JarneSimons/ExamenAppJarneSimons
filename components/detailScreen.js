@@ -5,7 +5,7 @@ const Detailscreen = props =>{
     return (
         <View style={styles.boxDetails}>
             <Image 
-                style={{width:'100%', height:400}} 
+                style={{width:'100%', height:400, zIndex: -1}} 
                 source={{uri: `${props.image}`}}
                 
             />
@@ -25,22 +25,31 @@ export default Detailscreen;
 const styles = StyleSheet.create ({
 
     boxDetails: {
-        backgroundColor: "#010B12",
-        paddingBottom: 310,
+        backgroundColor: "#f5f5f5",
+        
+        alignItems: 'center',
+        
     },
 
     titleDetail: {
-        alignItems: 'center',
         fontSize: 24,
-        color: "#f5f5f5"
+        color: "#f5f5f5",
+        paddingTop: 0,
+        paddingBottom: 20,
+        fontWeight: "bold",
     },
     info: {
-        
-        marginTop: -10,
-        borderRadius: 5,
+        marginTop: -5,
         paddingTop: 30,
+        paddingLeft: 20,
+        paddingRight: 20,
+        backgroundColor: "#010B12",
+        borderRadius: 5,
+        width: '100%',
+        paddingBottom: 310,
     },
     artistDetail: {
-        color: "#f5f5f5"
+        color: "#f5f5f5",
+        fontSize: 18,
     }
 });
