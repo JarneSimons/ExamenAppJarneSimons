@@ -3,13 +3,16 @@ import {StyleSheet, Text, View, FlatList, Image, TextInput, Pressable,} from 're
 
 const Detailscreen = props =>{
     return (
-        <View>
-            <Text>{props.title}</Text>
+        <View style={styles.boxDetails}>
             <Image 
-                style={{width:250, height:200}} 
+                style={{width:415, height:415}} 
                 source={{uri: `${props.image}`}}
             />
-            <Text >{props.artist}</Text>
+            <View>
+                <Text style={styles.titleDetail}>{props.title}</Text>
+                <Text >{props.artist}</Text>
+            </View>
+            
 
         </View>
     );
@@ -17,3 +20,15 @@ const Detailscreen = props =>{
 
 
 export default Detailscreen;
+
+const styles = StyleSheet.create ({
+
+    boxDetails: {
+        
+    },
+
+    titleDetail: {
+        alignItems: 'center',
+        fontSize: 24,
+    }
+});
