@@ -6,7 +6,7 @@ const Detailscreen = props =>{
         <View>
             <Text>{props.title}</Text>
             <Image 
-                style={{width:150, height:100}} 
+                style={{width:250, height:200}} 
                 source={{uri: `${props.image}`}}
             />
             <Text >{props.artist}</Text>
