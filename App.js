@@ -6,7 +6,7 @@ import { StyleSheet, Text, View } from 'react-native';
 
 import SongsDetail from './screens/songsDetail.js';
 import Songs from './screens/songs.js';
-const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator();//
 
 
 
@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    
   },
 
 
