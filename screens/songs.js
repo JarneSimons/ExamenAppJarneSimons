@@ -27,10 +27,7 @@ const Songs = ({navigation}) =>{//
     }, []);
 
 
-    const addLike = () => {
-        console.log("button pressed");
-        setLikes((currentLikes) => currentLikes+1)
-    };
+    
 
     const [input, setInput] = useState("");
     console.log(input);

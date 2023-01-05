@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {StyleSheet, Text, View, FlatList, Image, TextInput, Pressable,} from 'react-native';
+import {StyleSheet, Text, View, FlatList, Image, TextInput, Pressable, TouchableNativeFeedback} from 'react-native';
 
 const Detailscreen = props =>{
     return (
@@ -14,6 +14,12 @@ const Detailscreen = props =>{
                 <Text style={styles.artistDetail}>{props.artist}</Text>
             </View>
             
+            <View >
+                
+                <TouchableNativeFeedback style={styles.buttonReactions} onPress={console.log("button")}>
+                    <Text style={styles.textButton}>Leave a reaction</Text>
+                </TouchableNativeFeedback>
+            </View>
 
         </View>
     );
@@ -46,10 +52,21 @@ const styles = StyleSheet.create ({
         backgroundColor: "#010B12",
         borderRadius: 5,
         width: '100%',
-        paddingBottom: 310,
+        paddingBottom: 100,
     },
     artistDetail: {
         color: "#f5f5f5",
         fontSize: 18,
+    },
+    buttonReactions: {
+        
+    }, 
+    textButton: {
+        color: "#f5f5f5",
+        fontSize: 18,
+        backgroundColor:"black",
+        paddingLeft: 100,
+        paddingRight: 100,
     }
+   
 });

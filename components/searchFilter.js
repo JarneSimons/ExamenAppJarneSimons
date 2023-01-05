@@ -136,7 +136,7 @@ const styles = StyleSheet.create({
   title: {
     fontWeight: "bold",
     fontSize: 32,
-    color: "#f5f5f5",
+    color: "#010B12",
   },
   boxTitle: {
     marginTop: 20,
@@ -144,7 +144,7 @@ const styles = StyleSheet.create({
   },
 
   numbers: {
-    backgroundColor: "#1e1f21",
+    backgroundColor: "#f5f5f5",
     alignItems: "center",
     marginBottom: 15,
     marginTop: 10,
@@ -196,7 +196,7 @@ const styles = StyleSheet.create({
     marginTop: 5,
   },
   likeClick: {
-    color: "#f5f5f5",
+    color: "#010B12",
     fontSize: 16,
     fontWeight: "bold",
   },

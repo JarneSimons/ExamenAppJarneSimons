@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {StyleSheet, Text, View, FlatList, Image, TextInput, Pressable,} from 'react-native';
+import {StyleSheet, Text, View, FlatList, Image, TextInput, Pressable, Button, TouchableNativeFeedback,} from 'react-native';
 import Detailscreen from '../components/detailScreen';
 
 
@@ -30,6 +30,8 @@ const SongsDetail = ({navigation, route}) =>{
           image={route.params.itemImage}
           artist={route.params.itemArtist}
         />
+
+      
 
       </View>
     );
