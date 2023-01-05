@@ -1,7 +1,7 @@
 import { NavigationContainer } from '@react-navigation/native';
 import React, {useState, useEffect} from 'react';
 import {StyleSheet, Text, View, FlatList, Image, TextInput, Pressable, TouchableNativeFeedback} from 'react-native';
-import Reactions from '../screens/reactions';
+
 
 
 //
