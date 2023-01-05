@@ -12,14 +12,16 @@ const Detailscreen = props =>{
             <View style={styles.info}>
                 <Text style={styles.titleDetail}>{props.title}</Text>
                 <Text style={styles.artistDetail}>{props.artist}</Text>
+
+                    <View style={styles.buttonReactions}>
+                
+                        <TouchableNativeFeedback onPress={console.log("button")}>
+                            <Text style={styles.textButton}>Leave a reaction</Text>
+                            </TouchableNativeFeedback>
+                    </View>
             </View>
             
-            <View >
-                
-                <TouchableNativeFeedback style={styles.buttonReactions} onPress={console.log("button")}>
-                    <Text style={styles.textButton}>Leave a reaction</Text>
-                </TouchableNativeFeedback>
-            </View>
+            
 
         </View>
     );
@@ -32,9 +34,8 @@ const styles = StyleSheet.create ({
 
     boxDetails: {
         backgroundColor: "#f5f5f5",
-        
         alignItems: 'center',
-        
+    
     },
 
     titleDetail: {
@@ -52,21 +53,26 @@ const styles = StyleSheet.create ({
         backgroundColor: "#010B12",
         borderRadius: 5,
         width: '100%',
-        paddingBottom: 100,
+        paddingBottom: 250,
     },
     artistDetail: {
         color: "#f5f5f5",
         fontSize: 18,
     },
     buttonReactions: {
+        alignItems: 'center',
+        marginTop: 50,
         
     }, 
     textButton: {
-        color: "#f5f5f5",
+        borderRadius: 5,
+        color: "#010B12",
         fontSize: 18,
-        backgroundColor:"black",
-        paddingLeft: 100,
-        paddingRight: 100,
+        backgroundColor:"#39FF13",
+        paddingBottom: 15,
+        paddingTop: 15,
+        paddingLeft: 88,
+        paddingRight: 88
     }
    
 });
