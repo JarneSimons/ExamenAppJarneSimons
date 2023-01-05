@@ -1,7 +1,15 @@
+import { NavigationContainer } from '@react-navigation/native';
 import React, {useState, useEffect} from 'react';
 import {StyleSheet, Text, View, FlatList, Image, TextInput, Pressable, TouchableNativeFeedback} from 'react-native';
+import Reactions from '../screens/reactions';
 
-const Detailscreen = props =>{
+
+//
+
+
+const Detailscreen = (props) =>{
+
+
     return (
         <View style={styles.boxDetails}>
             <Image 
@@ -12,14 +20,9 @@ const Detailscreen = props =>{
             <View style={styles.info}>
                 <Text style={styles.titleDetail}>{props.title}</Text>
                 <Text style={styles.artistDetail}>{props.artist}</Text>
-
-                    <View style={styles.buttonReactions}>
-                
-                        <TouchableNativeFeedback onPress={console.log("button")}>
-                            <Text style={styles.textButton}>Leave a reaction</Text>
-                            </TouchableNativeFeedback>
-                    </View>
             </View>
+
+        
             
             
 
@@ -53,7 +56,7 @@ const styles = StyleSheet.create ({
         backgroundColor: "#010B12",
         borderRadius: 5,
         width: '100%',
-        paddingBottom: 250,
+        paddingBottom: 20,
     },
     artistDetail: {
         color: "#f5f5f5",
@@ -64,15 +67,6 @@ const styles = StyleSheet.create ({
         marginTop: 50,
         
     }, 
-    textButton: {
-        borderRadius: 5,
-        color: "#010B12",
-        fontSize: 18,
-        backgroundColor:"#39FF13",
-        paddingBottom: 15,
-        paddingTop: 15,
-        paddingLeft: 88,
-        paddingRight: 88
-    }
+ 
    
 });

@@ -6,6 +6,7 @@ import { StyleSheet, Text, View } from 'react-native';
 
 import SongsDetail from './screens/songsDetail.js';
 import Songs from './screens/songs.js';
+import Reactions from './screens/reactions.js'; 
 
 const Stack = createNativeStackNavigator();//
 
@@ -19,6 +20,7 @@ export default function App() {
       <Stack.Navigator>
         <Stack.Screen name ="Home" component={Songs} />
         <Stack.Screen name ="songsDetail" component={SongsDetail} />
+        <Stack.Screen name ="reactions" component={Reactions}/>
       </Stack.Navigator>
    </NavigationContainer>
   );
