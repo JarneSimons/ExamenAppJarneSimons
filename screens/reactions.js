@@ -4,12 +4,17 @@ import {StyleSheet, Text, View, FlatList, Image, TextInput, Pressable, Touchable
 
 
 const Reactions = ({navigation}) => {
+    
+    return(
+
     <View>
+        
         <Text style={styles.reactionScreen}>pagina werkt</Text>
 
         
 
     </View>
+    )
 }
 
 
