@@ -32,6 +32,11 @@ const Songs = ({navigation}) =>{//
 
     return(
         <View style={styles.home}>
+
+            <TextInput placeholder='search songs' style={{marginTop: 10, fontSize: 16, backgroundColor: "#f5f5f5", marginLeft: 30, marginRight: 30, borderRadius: 5, paddingLeft: 10, paddingTop: 5,paddingBottom:5}}/>
+
+            
+
             <View style={styles.boxLikes}>
                 <Text style={styles.likeCounter}>{likes}</Text>
                 <Image style={styles.like} source={require('../assets/images/like.png')}/>
@@ -55,7 +60,7 @@ const Songs = ({navigation}) =>{//
                     </Pressable>
 
                     <Pressable style={styles.likeButton} onPress={()=> addLike()}>
-                        <Text>like song</Text>
+                        <Text style={styles.likeClick}>like song</Text>
                     </Pressable>
                     
                 </View>
@@ -130,9 +135,9 @@ const styles = StyleSheet.create({
         marginBottom: 10,
     },
     likeButton: {
-        backgroundColor: "yellow",
         padding: 20,
-        color: "#f5f5f5",
+        
+        
         
     },
     likeCounter: {
@@ -152,6 +157,12 @@ const styles = StyleSheet.create({
         
         flexDirection: "row",
         marginTop: 5,
+    },
+    likeClick: {
+        color: "#f5f5f5",
+        fontSize: 16,
+        fontWeight: "bold",
+        
     }
 
 });

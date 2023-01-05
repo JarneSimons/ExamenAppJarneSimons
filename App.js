@@ -6,6 +6,7 @@ import { StyleSheet, Text, View } from 'react-native';
 
 import SongsDetail from './screens/songsDetail.js';
 import Songs from './screens/songs.js';
+import searchFilter from './components/searchFilter.js';
 const Stack = createNativeStackNavigator();//
 
 
