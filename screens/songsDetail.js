@@ -35,17 +35,23 @@ const SongsDetail = ({navigation, route}) =>{
           />
 
 
-          <TouchableOpacity>
+          <TouchableOpacity 
+          onPress={() => navigation.navigate("playSongs")}>
+
             <View style={styles.playIcon}>
               <Text style={styles.playSong}>Play song</Text>
               <Image 
                 style={{width: 50, height: 50}}
                 source={require("../assets/images/playIcon.png")}
+                
               />
             </View>
+
           </TouchableOpacity>
-            
-          
+
+
+
+
           <TouchableOpacity 
             style={styles.buttonReactions} 
             onPress={() => navigation.navigate("reactions")}
