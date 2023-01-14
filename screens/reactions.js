@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {StyleSheet, Text, View, FlatList, Image, TextInput, Pressable, TouchableNativeFeedback, TextComponent} from 'react-native';
+import {StyleSheet, Text, View, FlatList, Image, TextInput, Pressable, TouchableNativeFeedback, TextComponent, TouchableOpacity} from 'react-native';
 
 
 let writtenReactions = [
@@ -24,14 +24,38 @@ const Reactions = ({navigation}) => {
     
 
     const [reactions, setReactions] = useState(writtenReactions);
-    const [ownReaction, setOwnReaction] = useState([]);
+    const [ownReaction, setOwnReaction] = useState("");
+    const [ownName, setOwnname] = useState("");
 
 
     const placeReaction = (enteredText) => {
         console.log(enteredText);
         setOwnReaction(enteredText);
     }
+
+
+    const placeName = (enteredText) => {
+        console.log(enteredText);
+        setOwnname(enteredText);
+    }
     
+    const pressReaction = () => {
+        let addReaction = {
+            name: ownName,
+            reaction: ownReaction
+        };
+
+
+        let addNewReaction = {
+            name: addReaction.name,
+            reaction: addReaction.reaction
+        }
+
+
+
+        setReactions((writtenReactions) => [...writtenReactions, addNewReaction])
+        console.log(setReactions);
+    }
 
     return(
 
@@ -53,8 +77,14 @@ const Reactions = ({navigation}) => {
         />
 
         <View style={styles.boxOwnreaction}>
-            <TextInput style={styles.ownReaction} placeholder='Place your own reaction' onChangeText={placeReaction}></TextInput>    
+            <TextInput style={styles.ownName} placeholder='Your name' onChangeText={placeName}></TextInput>
+            <TextInput style={styles.ownReaction} placeholder='Place your own reaction' onChangeText={placeReaction}></TextInput>
+            <TouchableOpacity onPress={pressReaction} style={styles.styleButton}>
+                <Text>Place reaction</Text>
+            </TouchableOpacity>
         </View> 
+
+        
 
         
 
@@ -119,15 +149,39 @@ const styles = StyleSheet.create ({
     }, 
     ownReaction:{
         width: 340,
-        height: 50,
+        height: 110,
         borderRadius: 5,
         backgroundColor: "white",
-        color:" yellow",
         paddingLeft: 10,
+        paddingBottom: 70,
+        
+    },
+    ownName:{
+        width: 340,
+        height: 30,
+        borderRadius: 5,
+        backgroundColor: "white",
+        paddingLeft: 10,
+        marginBottom: 10
+        
+    },
+    
+    
+    boxOwnreaction:{
+        height: "60%",
+        alignItems: 'center',
+        marginTop: 50,
         
     }, 
-    boxOwnreaction:{
-        height: "60%"
-    }
+    styleButton: {
+        backgroundColor: "#39FF13",
+        marginTop: 10,
+        paddingLeft: 125,
+        paddingRight: 125,
+        paddingTop: 20,
+        paddingBottom: 20,
+        borderRadius: 5,
+    } 
+    
     
 });
