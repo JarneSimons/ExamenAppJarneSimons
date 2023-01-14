@@ -34,6 +34,16 @@ const SongsDetail = ({navigation, route}) =>{
             style={styles.screenStyle}
           />
 
+
+          <TouchableOpacity>
+            <View style={styles.playIcon}>
+              <Text style={styles.playSong}>Play song</Text>
+              <Image 
+                style={{width: 50, height: 50}}
+                source={require("../assets/images/playIcon.png")}
+              />
+            </View>
+          </TouchableOpacity>
             
           
           <TouchableOpacity 
@@ -75,8 +85,20 @@ containerDetails: {
 buttonReactions:{
   alignItems: 'center',
   zIndex: 2,
-  top: -20
+  top: -60
 },
+
+playIcon: {
+  top: -40,
+  marginLeft: 110
+  
+}, 
+playSong:{
+  color:"#f5f5f5",
+  fontSize: 24,
+  left: 65,
+  top: 40,
+}
 
 
 
