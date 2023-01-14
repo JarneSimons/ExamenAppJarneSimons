@@ -24,8 +24,13 @@ const Reactions = ({navigation}) => {
     
 
     const [reactions, setReactions] = useState(writtenReactions);
-    
-    
+    const [ownReaction, setOwnReaction] = useState([]);
+
+
+    const placeReaction = (enteredText) => {
+        console.log(enteredText);
+        setOwnReaction(enteredText);
+    }
     
 
     return(
@@ -47,10 +52,10 @@ const Reactions = ({navigation}) => {
         )}
         />
 
-
-        <View>
-            <TextInput placeholder='typ hier je reactie'></TextInput>    
+        <View style={styles.boxOwnreaction}>
+            <TextInput style={styles.ownReaction} placeholder='Place your own reaction' onChangeText={placeReaction}></TextInput>    
         </View> 
+
         
 
     </View>
@@ -68,12 +73,14 @@ const styles = StyleSheet.create ({
 
     reactionPage: {
         backgroundColor: "#010B12",
-        alignItems: 'center'
+        alignItems: 'center',
+        
     },
     reactionScreen: {
         color: "#f5f5f5",
         marginTop: 20,
         marginBottom: 20,
+        
         
         fontSize: 18,
         
@@ -109,6 +116,18 @@ const styles = StyleSheet.create ({
         paddingTop: 10,
         paddingBottom: 10,
         borderRadius: 5,
+    }, 
+    ownReaction:{
+        width: 340,
+        height: 50,
+        borderRadius: 5,
+        backgroundColor: "white",
+        color:" yellow",
+        paddingLeft: 10,
+        
+    }, 
+    boxOwnreaction:{
+        height: "60%"
     }
     
 });

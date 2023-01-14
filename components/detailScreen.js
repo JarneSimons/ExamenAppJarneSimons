@@ -40,7 +40,7 @@ const styles = StyleSheet.create ({
 
     boxDetails: {
         backgroundColor: "#010B12",
-        height: '79%'
+        height: '80%'
         
     
     },
