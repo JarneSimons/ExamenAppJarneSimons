@@ -45,8 +45,12 @@ const Reactions = ({navigation}) => {
                 
             </View>
         )}
-
         />
+
+
+        <View>
+            <TextInput placeholder='typ hier je reactie'></TextInput>    
+        </View> 
         
 
     </View>
@@ -64,22 +68,30 @@ const styles = StyleSheet.create ({
 
     reactionPage: {
         backgroundColor: "#010B12",
-        
+        alignItems: 'center'
     },
     reactionScreen: {
         color: "#f5f5f5",
+        marginTop: 20,
+        marginBottom: 20,
+        
+        fontSize: 18,
+        
     },
 
     containerReactions: {
+        backgroundColor: "#010B12",
+        
+        
         
     }, 
     nameReaction: {
-        color: "black",
+        color: "#010B12",
         fontWeight: "bold"
 
     }, 
     reactionStyle: {
-        color: "black"
+        color: "#010B12"
     }, 
     boxReactions:{
         backgroundColor: "#f5f5f5",
@@ -89,7 +101,8 @@ const styles = StyleSheet.create ({
 
         marginLeft: 20,
         marginRight: 20,
-        marginBottom: 5,
+        marginBottom: 10,
+        marginTop: 5,
         
         paddingLeft: 10,
         paddingRight: 10,
