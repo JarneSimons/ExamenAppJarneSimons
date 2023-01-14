@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react';
 import {StyleSheet, Text, View, FlatList, Image, TextInput, Pressable, TouchableNativeFeedback, TextComponent} from 'react-native';
 
 
-
 let writtenReactions = [
     {
         name: "Jarne Simons",
@@ -14,19 +13,37 @@ let writtenReactions = [
     }, 
     {
         name: "Pop Smoke",
-        reaction: "I think the songs needs more bass"
+        reaction: "I think the songs needs more bass."
     }
 ]
 
 
+
 const Reactions = ({navigation}) => {
+
     
+
+    const [reactions, setReactions] = useState(writtenReactions);
+    console.log(reactions);
+    
+    
+
     return(
 
     <View style={styles.reactionPage}>
         
         <Text style={styles.reactionScreen}>pagina werkt</Text>
+        <FlatList 
+        data={reactions} 
+        style={{height: 300, color: "red"}} 
+        renderItem={({item}) =>(
+            <View style={styles.containerReactions}>
+                <Text style={styles.nameReaction}>{item.name}</Text>
+                <Text style= {styles.reactionStyle}>{item.reaction}</Text>
+            </View>
+        )}
 
+        />
         
 
     </View>
@@ -49,5 +66,16 @@ const styles = StyleSheet.create ({
     reactionScreen: {
         color: "#f5f5f5",
     },
+
+    containerReactions: {
+        
+    }, 
+    nameReaction: {
+        color: "green"
+
+    }, 
+    reactionStyle: {
+        color: "green"
+    }
     
 });
