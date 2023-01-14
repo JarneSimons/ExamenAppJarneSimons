@@ -1,6 +1,6 @@
 import { NavigationContainer } from '@react-navigation/native';
 import React, {useState, useEffect} from 'react';
-import {StyleSheet, Text, View, FlatList, Image, TextInput, Pressable, TouchableNativeFeedback} from 'react-native';
+import {StyleSheet, Text, View, FlatList, Image, TextInput, Pressable, TouchableNativeFeedback, TouchableOpacity} from 'react-native';
 
 
 
@@ -22,8 +22,11 @@ const Detailscreen = (props) =>{
                 <Text style={styles.artistDetail}>{props.artist}</Text>
             </View>
 
-        
+           
             
+
+
+
             
 
         </View>
@@ -36,8 +39,9 @@ export default Detailscreen;
 const styles = StyleSheet.create ({
 
     boxDetails: {
-        backgroundColor: "#f5f5f5",
-        alignItems: 'center',
+        backgroundColor: "#010B12",
+        height: '79%'
+        
     
     },
 
@@ -56,7 +60,9 @@ const styles = StyleSheet.create ({
         backgroundColor: "#010B12",
         borderRadius: 5,
         width: '100%',
+        
         paddingBottom: 20,
+        
     },
     artistDetail: {
         color: "#f5f5f5",

@@ -24,25 +24,28 @@ const SongsDetail = ({navigation, route}) =>{
     );*/
 
     return(
-      <View>
-        <Detailscreen
-          title={route.params.itemTitle}
-          image={route.params.itemImage}
-          artist={route.params.itemArtist}
-        />
 
+      <View style={styles.containerDetails}>
         
+          <Detailscreen
+            title={route.params.itemTitle}
+            image={route.params.itemImage}
+            artist={route.params.itemArtist}
+            style={styles.screenStyle}
+          />
+
+            
+          
           <TouchableOpacity 
             style={styles.buttonReactions} 
             onPress={() => navigation.navigate("reactions")}
-            >
+          >
             <Text style={styles.textButton}>Leave a reaction</Text>
           </TouchableOpacity>
+
+
         
-      
-
       </View>
-
         
     );
 
@@ -60,7 +63,25 @@ const styles = StyleSheet.create ({
     backgroundColor:"#39FF13",
     paddingBottom: 15,
     paddingTop: 15,
-    paddingLeft: 88,
-    paddingRight: 88
-}
+    paddingLeft: 80,
+    paddingRight: 80,
+    marginTop: 50,
+    marginRight: 10,
+}, 
+containerDetails: {
+  backgroundColor: "#010B12",
+  height: '100%'
+}, 
+buttonReactions:{
+  alignItems: 'center',
+  zIndex: 2,
+  top: -20
+},
+
+
+
+
+
+
+
 });
