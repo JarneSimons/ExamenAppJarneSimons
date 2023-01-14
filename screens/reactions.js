@@ -24,7 +24,7 @@ const Reactions = ({navigation}) => {
     
 
     const [reactions, setReactions] = useState(writtenReactions);
-    console.log(reactions);
+    
     
     
 
@@ -32,14 +32,17 @@ const Reactions = ({navigation}) => {
 
     <View style={styles.reactionPage}>
         
-        <Text style={styles.reactionScreen}>pagina werkt</Text>
+        <Text style={styles.reactionScreen}>Other reactions</Text>
         <FlatList 
         data={reactions} 
-        style={{height: 300, color: "red"}} 
+        style={{height: "100%", color: "red"}} 
         renderItem={({item}) =>(
             <View style={styles.containerReactions}>
-                <Text style={styles.nameReaction}>{item.name}</Text>
-                <Text style= {styles.reactionStyle}>{item.reaction}</Text>
+                <View style={styles.boxReactions}>
+                    <Text style={styles.nameReaction}>{item.name}</Text>
+                    <Text style= {styles.reactionStyle}>{item.reaction}</Text>
+                </View>
+                
             </View>
         )}
 
@@ -71,11 +74,28 @@ const styles = StyleSheet.create ({
         
     }, 
     nameReaction: {
-        color: "green"
+        color: "black",
+        fontWeight: "bold"
 
     }, 
     reactionStyle: {
-        color: "green"
+        color: "black"
+    }, 
+    boxReactions:{
+        backgroundColor: "#f5f5f5",
+
+        /*borderBottomColor:"black",
+        borderBottomWidth: 2,*/
+
+        marginLeft: 20,
+        marginRight: 20,
+        marginBottom: 5,
+        
+        paddingLeft: 10,
+        paddingRight: 10,
+        paddingTop: 10,
+        paddingBottom: 10,
+        borderRadius: 5,
     }
     
 });
