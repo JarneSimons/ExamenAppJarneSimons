@@ -80,7 +80,7 @@ const Reactions = ({navigation}) => {
             <TextInput style={styles.ownName} placeholder='Your name' onChangeText={placeName}></TextInput>
             <TextInput style={styles.ownReaction} placeholder='Place your own reaction' onChangeText={placeReaction}></TextInput>
             <TouchableOpacity onPress={pressReaction} style={styles.styleButton}>
-                <Text>Place reaction</Text>
+                <Text style={styles.textReaction}>Place reaction</Text>
             </TouchableOpacity>
         </View> 
 
@@ -173,14 +173,19 @@ const styles = StyleSheet.create ({
         marginTop: 50,
         
     }, 
+
+
     styleButton: {
         backgroundColor: "#39FF13",
         marginTop: 10,
-        paddingLeft: 125,
-        paddingRight: 125,
+        paddingLeft: 112,
+        paddingRight: 112,
         paddingTop: 20,
         paddingBottom: 20,
         borderRadius: 5,
+    },
+    textReaction:{
+        fontSize: 18
     } 
     
     
