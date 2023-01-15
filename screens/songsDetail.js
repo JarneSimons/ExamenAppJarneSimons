@@ -5,23 +5,7 @@ import Detailscreen from '../components/detailScreen';
 
 const SongsDetail = ({navigation, route}) =>{
 
-   /* scherm zonder component
-    return(
-        
-      <View style={styles.boxTitle}>
-          <Text style={styles.detailTitle}>
-            {route.params.itemTitle}
-          </Text>
 
-          <Text>
-            {route.params.itemArtist}
-          </Text>
-
-          <Image style={{width:300, height:200}} source={{uri: `${route.params.itemImage}`}}/>
-            
-        
-        </View>
-    );*/
 
     return(
 
